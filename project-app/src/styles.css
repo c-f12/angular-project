@@ -1,0 +1,348 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/reset-css/reset.css');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+*,*:after,*::after,*:before,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    color: black;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+strong{
+    font-weight: 700;
+}
+
+img{
+    width: 100%;
+}
+
+.active{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.oculto{
+    display: none;
+}
+
+.title{
+    font-family: 'Playfair Display', serif;
+}
+
+nav{
+    width: 100%;
+    border-bottom: 0.1rem solid #eeeeee; 
+    background-color: white;    
+    padding: 1rem 1rem 0 1rem;
+}
+
+.nav-bars-wrapper{
+    position: relative;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.logo{
+    width: 2rem;
+}
+
+nav .nav__bars{
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+}
+
+nav> ul{
+    text-align: center;
+    /*display: none;*/
+    padding-bottom: 1rem;
+}
+
+nav>ul>li:first-child{
+    margin-bottom: 1rem;
+}
+
+.hero-wrapper{
+    height: 400px;
+    background-color: black;
+    overflow: hidden;
+    background-image: url('assets/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-wrapper .hero__text{
+    margin: 0 2rem;
+    color: white;
+    font-size: 2.5rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper{
+    margin: 0 1rem 3rem 1rem;
+}
+
+.wrapper, section, article {
+    overflow: hidden;
+}
+
+section{
+    margin-top: 2.5rem;
+}
+
+section h2{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+section h2:after{
+    content: '';
+    display: block;
+    background-color: black;
+    height: 0.2rem;
+    width: 2.5rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+.brands article{
+    margin-bottom: 1.5rem;
+}
+
+section .curiosity{
+    color: #03d0b6;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+section .intro p:last-child{
+    margin-bottom: 0;
+}
+
+section p{
+    margin-bottom: 1rem;
+}
+
+article h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+article .number{
+    color: #03d0b6;
+    font-size: 3.5rem;
+}
+
+.article-group{
+    background-color: #03d0b6;
+}
+
+.article-group:not(:last-child){
+    margin-bottom: 2rem;
+}
+
+.article-content{
+    padding: 1rem;
+    color: white;
+}
+
+.button{
+    margin: auto;
+    display: block;
+    width: 11rem;
+    background-color: white;
+    color: #03d0b6;
+    border: solid #03d0b6 0.1rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.button:hover{
+    border: solid white 0.1rem;
+    background-color: #03d0b6;
+    color: white;
+}
+
+.img-autor{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+.description{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+form{
+    background-color: #03d0b6;
+    color: white;
+    padding: 1rem;
+}
+
+.form__group:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+input, select, textarea{
+    color: white;
+    width: 100%;
+    outline: 0 none;
+    border: 0 none;
+    font-size: 1rem;
+}
+
+select{
+    height: 2rem;
+    color: #03d0b6;
+    background-color: white;
+}
+
+input[type="text"],
+input[type="email"]{
+    background-color: transparent;
+    border-bottom: 0.1rem white solid;
+}
+
+textarea{
+    color: #03d0b6;
+    height: 5rem;
+    resize: none;
+}
+
+.result-form{
+    background-color: #03d0b6;
+    padding: 1rem;
+    color: white;
+}
+
+.result-list li:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+footer{
+    border-top: solid #e3e3e3 0.05rem;
+    margin: 0 1rem;
+}
+
+footer p{
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 600px){
+    .hero-wrapper{
+        height: 500px;
+    }
+
+    .hero-wrapper .hero__text{
+        margin: auto;
+        max-width: 28rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    nav, footer{
+        max-width: 55rem;
+        margin: auto;
+    }
+
+    .article-group{
+        overflow: hidden;
+    }
+
+    .article-group img,
+    .article-group .article-content,
+    .about img{
+        float: left;
+        width: 50%;
+    }
+
+    .about .description{
+        float: left;
+        margin-left: 5%;
+        width: 45%;
+    }
+
+    .brands article:nth-child(3) img,
+    .brands article:nth-child(3) .article-content {
+        float: right;
+    }
+
+    .wrapper{
+        width: 36rem;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    nav{
+        text-align: right;
+        overflow: hidden;
+    }
+
+    nav ul, nav ul li{
+        display: inline-block;  
+    }
+
+    nav ul li:first-child{
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .nav-bars-wrapper{
+        float: left;
+    }
+
+    .nav__bars{
+        display: none;
+    }
+
+    .hero-wrapper .hero__text{
+        font-size: 3.5rem;
+        max-width: 35rem;
+    }
+
+    .wrapper{
+        width: 45rem;
+    }
+
+    .article-content{
+        padding: 2rem;
+    }
+
+    .article-content p{
+        margin-bottom: 2rem;
+    }
+}
