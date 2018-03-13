@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
+  @Input() aItems: Array<any>;
+  @Output() outBorrarItem: EventEmitter<number>;
+
+  constructor() {
+    this.outBorrarItem = new EventEmitter();
+   }
 
   ngOnInit() {
+  }
+
+  deleteItem(i) {
+    this.outBorrarItem.emit(i);
   }
 
 }

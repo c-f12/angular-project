@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AltasComponent } from './altas/altas.component';
 import { ListaComponent } from './lista/lista.component';
+import { BlogService } from '../services/blog.service';
 
 @NgModule({
   imports: [
@@ -19,6 +20,9 @@ import { ListaComponent } from './lista/lista.component';
     BlogComponent,
     AltasComponent,
     ListaComponent
+  ],
+  providers: [
+    BlogService
   ],
   exports: [
     BlogComponent

@@ -1,3 +1,10 @@
-<p>
-  lista works!
-</p>
+<ul class="list-group">
+  <li class="list-group-item"
+  *ngFor="let item of aItems; let i = index">
+      <span class="col">{{item.title}}</span>
+      <span class="col">{{item.autor}}</span>
+      <p>{{item.contenido}}</p>
+      <button class="btn btn-sm btn-outline-danger"
+        (click)="deleteItem(i)">Eliminar</button>
+  </li>
+</ul>

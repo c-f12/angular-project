@@ -1,0 +1,18 @@
+<div class="container mb-2">
+   <div class="row align-items-center main">
+       <div class="col text-center">
+           <div class="card">
+             <div class="card-header">
+               Lista de blog
+             </div>
+             <div class="card-body">
+               <app-altas (outAddPost)="addPost($event)"></app-altas>
+             </div>
+             <div class="card-footer text-left text-muted" *ngIf="aPosts.length">
+               <app-lista [aItems]="aPosts" (outBorrarItem)="deleteContacto($event)"></app-lista>
+             </div>
+           </div>
+       </div>
+   </div>
+ </div>
+ 
