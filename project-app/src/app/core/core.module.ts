@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CabezaComponent } from './cabeza/cabeza.component';
 import { RouterModule } from '@angular/router';
+import { PieComponent } from './pie/pie.component';
 
 @NgModule({
   imports: [
@@ -9,10 +10,12 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   declarations: [
-    CabezaComponent
+    CabezaComponent,
+    PieComponent
   ],
   exports: [
-    CabezaComponent
+    CabezaComponent,
+    PieComponent
   ]
 })
 export class CoreModule { }

@@ -2,11 +2,13 @@
   <nav>
       <div class="nav-bars-wrapper">
           <img class="logo" src="assets/logo.jpg" alt="Logo Moda Sostenible">
-          <span id="nav-bars" class="fa fa-bars nav__bars"></span>
+          <span id="nav-bars" class="fa fa-bars nav__bars" (click)="toggleMenu()"></span>
       </div>
       <ul id="menu-list">
           <li><a routerLinkActive="active" routerLink="home">Home</a></li>
           <li><a routerLinkActive="active" routerLink="about">Nosotros</a></li>
+          <li><a routerLinkActive="active" routerLink="blog">Blog</a></li>
       </ul>
   </nav>
 </header>
+ <!-- [ngStyle]="{'display':'none'}" -->
