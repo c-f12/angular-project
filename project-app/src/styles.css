@@ -38,6 +38,14 @@ img{
     display: none;
 }
 
+input:disabled,
+input:disabled:hover{
+    opacity: 0.5;
+    background-color: white;
+    color: #03d0b6;
+    border: 0;
+}
+
 .title{
     font-family: 'Playfair Display', serif;
 }
@@ -71,7 +79,7 @@ nav> ul{
     padding-bottom: 1rem;
 }
 
-nav>ul>li:first-child{
+nav ul li:not(:last-child){
     margin-bottom: 1rem;
 }
 
