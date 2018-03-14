@@ -8,18 +8,22 @@ import { FormsModule } from '@angular/forms';
 import { AltasComponent } from './altas/altas.component';
 import { ListaComponent } from './lista/lista.component';
 import { BlogService } from '../services/blog.service';
+import { PipeModule } from '../pipe/pipe.module';
+import { DetallesComponent } from './detalles/detalles.component';
 
 @NgModule({
   imports: [
     CommonModule,
     BlogRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    PipeModule
   ],
   declarations: [
     BlogComponent,
     AltasComponent,
-    ListaComponent
+    ListaComponent,
+    DetallesComponent
   ],
   providers: [
     BlogService

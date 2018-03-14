@@ -4,7 +4,7 @@ import { Post } from '../../modelos/blog';
 @Component({
   selector: 'app-altas',
   templateUrl: './altas.component.html',
-  styles: []
+  styleUrls: ['./altas.component.css']
 })
 export class AltasComponent implements OnInit {
 

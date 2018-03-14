@@ -31,4 +31,8 @@ export class BlogService {
     i++;
     return this.http.delete(this.sURL + '/' + i).toPromise();
   }
+
+  getPost(id: number) {
+    return this.aPosts.find(post => post.id === +id);
+  }
 }

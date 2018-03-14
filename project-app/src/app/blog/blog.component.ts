@@ -5,7 +5,7 @@ import { BlogService } from '../services/blog.service';
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styles: []
+  styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
   aPosts: Array<Post>;
@@ -19,7 +19,7 @@ export class BlogComponent implements OnInit {
     );
   }
 
-  deleteContacto (i) {
+  deletePost (i) {
     this.blogservice.deletePost(i)
     .then(
       () => {this.blogservice.getPosts()
