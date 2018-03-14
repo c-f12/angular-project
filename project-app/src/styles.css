@@ -9,10 +9,10 @@
 }
 
 body{
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Raleway', 'Arial', sans-serif;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.3;
     color: black;
 }
 
@@ -36,6 +36,12 @@ img{
 
 .oculto{
     display: none;
+}
+
+.error-message{
+    font-size: 12px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 input:disabled,
@@ -110,17 +116,17 @@ nav ul li:not(:last-child){
     overflow: hidden;
 }
 
-section{
+section, .intro{
     margin-top: 2.5rem;
 }
 
-section h2{
+section h2, article h2{
     margin-bottom: 1rem;
     font-size: 1.5rem;
     text-align: center;
 }
 
-section h2:after{
+section h2:after, article h2:after{
     content: '';
     display: block;
     background-color: black;
@@ -132,20 +138,21 @@ section h2:after{
 
 .brands article{
     margin-bottom: 1.5rem;
+    font-size: 14px;
 }
 
-section .curiosity{
+.curiosity{
     color: #03d0b6;
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-section .intro p:last-child{
+.intro p:last-child{
     margin-bottom: 0;
 }
 
-section p{
+section p, article p{
     margin-bottom: 1rem;
 }
 
@@ -266,7 +273,48 @@ footer p{
     margin: 1rem 0;
 }
 
+.blog-entry-wrapper{
+    overflow: hidden;
+}
+
+.blog-entry{
+    display: block;
+    margin-top: 2rem;
+    border-bottom: 0.1rem solid #03d0b6;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.blog-entry h1{
+    color: #03d0b6;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.blog-entry p{
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.blog-entry .blog-entry__author{
+    font-style: italic;
+    font-size: 12px;
+}
+
+.blog-entry .blog-entry__delete{
+    color: #03d0b6;
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+}
+
 @media screen and (min-width: 600px){
+    body{
+        font-size: 16px;
+    }
+
     .hero-wrapper{
         height: 500px;
     }
@@ -280,7 +328,7 @@ footer p{
     }
 
     nav, footer{
-        max-width: 55rem;
+        max-width: 40rem;
         margin: auto;
     }
 
@@ -311,6 +359,28 @@ footer p{
         margin: auto;
         margin-bottom: 3rem;
     }
+
+    .blog-entry{
+        width: 31%;
+        float: left;
+        min-height: 18rem;
+    }
+
+    .blog-entry .blog-entry__author{
+        position: absolute;
+        bottom: 0rem;
+    }
+
+    .blog-entry:first-child{
+        margin-right: 1.5%;
+    }
+    .blog-entry:nth-child(2){
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }
+    .blog-entry:last-child{
+        margin-left: 1.5%;
+    }
 }
 
 @media screen and (min-width: 1024px){
@@ -318,15 +388,16 @@ footer p{
     nav{
         text-align: right;
         overflow: hidden;
+        padding: 0;
     }
 
     nav ul, nav ul li{
-        display: inline-block;  
+        display: inline-block !important;  
     }
 
-    nav ul li:first-child{
+    nav ul li:not(:last-child){
         margin-bottom: 0;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
     }
 
     .nav-bars-wrapper{
@@ -342,7 +413,7 @@ footer p{
         max-width: 35rem;
     }
 
-    .wrapper{
+    .wrapper, nav, footer{
         width: 45rem;
     }
 
