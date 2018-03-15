@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabezaComponent implements OnInit {
 
-  // estado = 'none';
-
   constructor() { }
 
   ngOnInit() {
   }
 
   toggleMenu() {
-    document.querySelector('#menu-list').classList.toggle('oculto');
- }
- 
+    const menuList = document.querySelector('#menu-list');
+    const navBars = document.querySelector('#nav-bars');
+
+    menuList.classList.toggle('oculto');
+  }
 }

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-pie',
   templateUrl: './pie.component.html',
-  styles: []
+  styleUrls: ['./pie.component.css']
 })
 export class PieComponent implements OnInit {
 
