@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListaComponent } from './lista.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { PipeModule } from '../../pipe/pipe.module';
+import { BlogService } from '../../services/blog.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('ListaComponent', () => {
   let component: ListaComponent;
@@ -8,7 +12,9 @@ describe('ListaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListaComponent ]
+      declarations: [ ListaComponent ],
+      imports: [RouterTestingModule, PipeModule, HttpClientModule],
+      providers: [BlogService, HttpClient]
     })
     .compileComponents();
   }));
