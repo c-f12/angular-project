@@ -1,0 +1,31 @@
+.hero-wrapper{
+    background-image: url('../../assets/hero.jpg');
+}
+
+.brands article{
+    margin-bottom: 1.5rem;
+}
+
+.curiosity{
+    color: #03d0b6;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.intro p:last-child{
+    margin-bottom: 0;
+}
+
+article .number{
+    color: #03d0b6;
+    font-size: 3.5rem;
+}
+
+@media screen and (min-width: 600px){
+    .brands article:nth-child(3) img,
+    .brands article:nth-child(3) .article-content {
+        float: right;
+    }
+
+}
