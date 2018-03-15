@@ -1,11 +1,11 @@
 <ul class="blog-entry-wrapper">
-  <a *ngFor="let item of aItems; let i = index"
-    [routerLink]="['./post', item.id]" class="blog-entry">
-    <li>
-        <h1>{{item.titulo}}</h1>
+  <li *ngFor="let item of aItems; let i = index" class="blog-entry">
+    <a [routerLink]="['./post', item.id]">
+        <h2>{{item.titulo}}</h2>
+    </a>
         <p>{{ item.contenido | textLength }}</p>
         <span class="blog-entry__author">By: {{item.autor}}</span>
-        <i class="fa fa-trash blog-entry__delete" aria-hidden="true" (click)="deleteItem(i)"></i>
-    </li>
-  </a>
+    
+    <i class="fa fa-trash blog-entry__delete" aria-hidden="true" (click)="deleteItem(item.id)"></i>
+  </li>
 </ul>

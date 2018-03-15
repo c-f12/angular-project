@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-detalles',
   templateUrl: './detalles.component.html',
-  styles: []
+  styleUrls: ['./detalles.component.css']
 })
 export class DetallesComponent implements OnInit {
 
@@ -14,15 +14,19 @@ export class DetallesComponent implements OnInit {
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute,
-    private catalogo: BlogService) { }
+    private blog: BlogService) { }
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.params['id'];
     if (id) {
-      this.oPost = this.catalogo.getPost(id);
+      this.oPost = this.blog.getPost(id);
     } else {
       this.oPost = {id: 0, titulo: '', autor: '',  contenido: ''};
     }
+  }
+
+  backToBlog() {
+    this.router.navigateByUrl('/blog');
   }
 
 }

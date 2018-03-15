@@ -1,0 +1,23 @@
+.blog-content{
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.button{
+    border: 0.1rem #03d0b6 solid;
+}
+
+h1{
+    color: #03d0b6;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.autor{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contenido{
+    margin-bottom: 1rem;
+}

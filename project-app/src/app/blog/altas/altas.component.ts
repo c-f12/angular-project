@@ -19,13 +19,12 @@ export class AltasComponent implements OnInit {
 
   ngOnInit() {
     this.resetPost();
-    // Pasar class 'was-validated' de bootstrap al form:
-    this.oValidado = { 'was-validated': true };
   }
 
   enviar() {
     this.outAddPost.emit(this.oPost);
     this.resetPost();
+    this.btnBorrar();
   }
 
   btnBorrar() {

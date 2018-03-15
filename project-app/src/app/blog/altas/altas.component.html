@@ -1,4 +1,4 @@
-<form novalidate [ngClass]="oValidado" #form1="ngForm" (ngSubmit)="enviar()">
+<form #form1="ngForm" method="post" (submit)="enviar()">
 
       <div  class="form__group">
           <!--Etiqueta / Campo "Autor"-->						

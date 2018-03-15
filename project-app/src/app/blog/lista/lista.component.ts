@@ -6,7 +6,7 @@ import { BlogService } from '../../services/blog.service';
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
-  styles: []
+  styleUrls: ['./lista.component.css']
 })
 export class ListaComponent implements OnInit {
   aPosts: Array<Post>;
@@ -18,15 +18,12 @@ export class ListaComponent implements OnInit {
       this.outBorrarItem = new EventEmitter();
    }
 
-   ngOnInit() {
-    this.aPosts = [];
-    this.blogservice.getPosts().then(
-      response => this.aPosts = response
-    );
+  ngOnInit() {
   }
 
-  deleteItem(i) {
-    this.outBorrarItem.emit(i);
+  deleteItem(item) {
+    this.outBorrarItem.emit(item);
+    console.log(item);
   }
 
 }

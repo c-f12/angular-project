@@ -1,6 +1,9 @@
-<div>
-    <h1>{{oPost.titulo}}</h1>
-    <span>{{oPost.autor}}</span>
+<div class="wrapper">
+    <div class="blog-content">
+        <h1 class="title">{{oPost.titulo}}</h1>
+        <p class="contenido">{{oPost.contenido}}</p>
+        <span class="autor">{{oPost.autor}}</span>
+    </div>
 
-    <p>{{oPost.contenido}}</p>
+    <button (click)="backToBlog()" class="button">Volver</button>
 </div>
