@@ -1,6 +1,6 @@
 {
   "posts": [
-    { 
+    {
       "id": 1,
       "autor": "Clara Fernández",
       "titulo": "¿Por qué es importante la moda ecológica?",
@@ -17,6 +17,12 @@
       "autor": "Clara Fernández",
       "titulo": "¡Qué cara es la moda sostenible!",
       "contenido": "Hace ya mucho tiempo que, sin conocer ninguno de esos datos, apuesto por la ropa de calidad en lugar de por la cantidad. Siempre he preferido comprarme una camiseta dos o tres veces más cara que me encanta y que sigo poniéndome muchos años después a comprarme 5 camisetas baratas por temporada y tirarlas al final del año por que están destrozadas. Un precio alto no significa necesariamente mayor calidad y mucho menos sostenibilidad pero sí es cierto que una prenda sostenible implica, al menos a día de hoy con volúmenes bajos de producción, un precio más elevado. Siempre he pensado que apostar por estos valores era una simple cuestión de carácter o consecuencia de mi “manía” por diferenciarme pero ahora me doy cuenta de que es un valor que deberíamos inculcar a las futuras generaciones."
+    },
+    {
+      "id": 4,
+      "autor": "Clara Fernández",
+      "titulo": "Crecimiento empresarial. No todo es dinero",
+      "contenido": "En nuestra entrevista a Mónica de la Fuente, creadora de Madresfera, nos hablaba de un interesante artículo que acababa de leer: “Empresa Cebra” contrapuesto a la “Empresa Unicornio”. Nos contaba que Las empresas Cebra están surgiendo como reacción a las anteriores y no buscan un crecimiento solo económico sino que tienen un fuerte componente social y emocional.Sin embargo para la mayoría de las empresas el único objetivo es crecer como sinónimo de multiplicar año a año el porcentaje de sus beneficios. Llamadme utópica y romántica, llamadme ilusa, pero para mi crecer tiene otro significado. Para mi crecer significa mejorar como persona, conocerme cada vez un poquito más, y crear una marca con verdadero significado de la que pueda estar muy orgullosa. Orgullosa porque diseña productos diferentes y únicos de mucha calidad, porque todas las personas implicadas en el proyecto desde su origen se han sentido parte importante del mismo y han sido tratadas con todo respeto y valor, y porque se han utilizado materias primas naturales sin tóxicos que respetan el Medio Ambiente."
     }
   ]
 }

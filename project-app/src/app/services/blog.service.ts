@@ -27,12 +27,13 @@ export class BlogService {
     return this.http.post(this.sURL, oPost).toPromise();
   }
 
-  deletePost(i) {
-    i++;
-    return this.http.delete(this.sURL + '/' + i).toPromise();
+  deletePost(id) {
+    console.log(id);
+    return this.http.delete(this.sURL + '/' + id).toPromise();
   }
 
   getPost(id: number) {
     return this.aPosts.find(post => post.id === +id);
   }
+
 }
