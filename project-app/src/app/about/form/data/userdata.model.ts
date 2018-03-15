@@ -1,7 +1,8 @@
-import { UserIf, MarcasIf } from './master.model';
+import { MarcasIf } from './master.model';
 
 export interface UserDataIf {
-    user: UserIf;
+    nombre: string;
+    email: string;
     marcas: MarcasIf;
     comentarios: string;
 }

@@ -1,15 +1,10 @@
-export interface UserIf {
-    nombre: string;
-    email: string;
-}
-
-export class User implements UserIf {
-    constructor(
-        public nombre: string,
-        public email: string) {}
-}
-
 export interface MarcasIf {
     id: string;
     marca: string;
+}
+
+export class Marcas implements MarcasIf {
+    constructor(
+        public id: string,
+        public marca: string) {}
 }

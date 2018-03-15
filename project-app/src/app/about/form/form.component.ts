@@ -19,17 +19,26 @@ export class FormComponent implements OnInit {
   ngOnInit() {
     this.aMarcas = Marcas;
     this.userData = {
-      user: { nombre: '', email: '' },
+      nombre: '',
+      email: '',
       marcas: { id: '', marca: ''},
       comentarios: '',
     };
 
     console.dir(this.nombreState);
     console.dir(this.aMarcas);
+    console.log(this.userData);
   }
 
   enviar() {
     document.querySelector('.result-form').classList.toggle('oculto');
+
+    for (const key in this.userData) {
+      if (this.userData.hasOwnProperty(key)) {
+      localStorage.setItem(key, this.userData[key]);
+      }
+    }
+
     console.log(this.userData);
     console.log('submit');
   }
