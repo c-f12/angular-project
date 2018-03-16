@@ -23,7 +23,6 @@ export class AltasComponent implements OnInit {
 
   enviar() {
     this.outAddPost.emit(this.oPost);
-    this.resetPost();
     this.btnBorrar();
   }
 

@@ -21,9 +21,9 @@ export class ListaComponent implements OnInit {
   ngOnInit() {
   }
 
-  deleteItem(item) {
-    this.outBorrarItem.emit(item);
-    console.log(item);
+  deleteItem(id) {
+    this.outBorrarItem.emit(id);
+    console.log(id);
   }
 
 }

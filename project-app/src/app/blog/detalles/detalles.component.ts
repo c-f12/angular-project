@@ -18,6 +18,7 @@ export class DetallesComponent implements OnInit {
 
   ngOnInit() {
     const id = this.activatedRoute.snapshot.params['id'];
+    console.log(id);
     if (id) {
       this.oPost = this.blog.getPost(id);
     } else {

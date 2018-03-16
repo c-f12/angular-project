@@ -19,8 +19,8 @@ export class BlogComponent implements OnInit {
     );
   }
 
-  deletePost (item) {
-    this.blogservice.deletePost(item)
+  deletePost (id) {
+    this.blogservice.deletePost(id)
     .then(
       () => {this.blogservice.getPosts()
         .then(response =>  this.aPosts = response);

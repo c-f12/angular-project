@@ -2,12 +2,12 @@
   <nav>
       <div class="nav-bars-wrapper">
           <img class="logo" src="assets/logo.jpg" alt="Logo Moda Sostenible">
-          <span id="nav-bars" class="fa fa-bars nav__bars" (click)="toggleMenu()"></span>
+          <span id="nav-bars" class="fa fa-bars nav__bars" (click)="classvisible = !classvisible" (click)="toggleMenu()" #navBars></span>
       </div>
-      <ul id="menu-list" class="oculto">
-          <li><a routerLinkActive="active" routerLink="home" (click)="toggleMenu()">Home</a></li>
-          <li><a routerLinkActive="active" routerLink="about" (click)="toggleMenu()">Nosotros</a></li>
-          <li><a routerLinkActive="active" routerLink="blog" (click)="toggleMenu()">Blog</a></li>
+      <ul id="menu-list" [class.oculto]="classvisible" #menuList>
+          <li><a routerLinkActive="active" routerLink="home" (click)="classvisible = !classvisible" (click)="toggleMenu()">Home</a></li>
+          <li><a routerLinkActive="active" routerLink="about" (click)="classvisible = !classvisible" (click)="toggleMenu()">Nosotros</a></li>
+          <li><a routerLinkActive="active" routerLink="blog" (click)="classvisible = !classvisible" (click)="toggleMenu()">Blog</a></li>
       </ul>
   </nav>
 </header>
