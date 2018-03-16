@@ -33,6 +33,7 @@ export class BlogService {
   }
 
   getPost(id: number) {
+    // +id -> convert string to a number
     return this.aPosts.find(post => post.id === +id);
   }
 
