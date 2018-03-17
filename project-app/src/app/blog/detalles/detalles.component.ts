@@ -17,13 +17,13 @@ export class DetallesComponent implements OnInit {
     private blog: BlogService) { }
 
   ngOnInit() {
+    this.oPost = {id: 0, titulo: '', autor: '',  contenido: ''};
+
     const id = this.activatedRoute.snapshot.params['id'];
-    console.log(id);
-    if (id) {
-      this.oPost = this.blog.getPost(id);
-    } else {
-      this.oPost = {id: 0, titulo: '', autor: '',  contenido: ''};
-    }
+
+    this.blog.getPost(id).then((value) => {this.oPost = value; })
+    .catch(() => console.log('Error al mostrar la entrada'));
+
   }
 
   backToBlog() {

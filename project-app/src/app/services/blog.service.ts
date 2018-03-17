@@ -8,6 +8,7 @@ const urlApi = 'http://localhost:3000/posts';
 export class BlogService {
   private sURL: string;
   private aPosts: Array<Post>;
+  private post: any;
 
   constructor(public http: HttpClient) {
     this.sURL = urlApi;
@@ -34,7 +35,11 @@ export class BlogService {
 
   getPost(id: number) {
     // +id -> convert string to a number
-    return this.aPosts.find(post => post.id === +id);
+    return this.http.get(this.sURL).toPromise()
+    .then((response: any) => {
+      this.aPosts = response;
+      return this.aPosts.find(post => post.id === +id);
+    });
   }
 
 }
